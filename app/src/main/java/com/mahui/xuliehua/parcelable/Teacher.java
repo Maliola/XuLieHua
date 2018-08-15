@@ -110,11 +110,13 @@ public class Teacher implements Parcelable {
     public static final Creator<Teacher> CREATOR = new Creator<Teacher>() {
         @Override
         public Teacher createFromParcel(Parcel in) {
+            //从序列化的对象创建原始对象
             return new Teacher(in);
         }
 
         @Override
         public Teacher[] newArray(int size) {
+            //创建指定长度的原始数组
             return new Teacher[size];
         }
     };
